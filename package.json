@@ -26,6 +26,14 @@
     "diagnostics",
     "claude"
   ],
+  "homepage": "https://github.com/JerenzeLevi/mcpdoctor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JerenzeLevi/mcpdoctor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JerenzeLevi/mcpdoctor/issues"
+  },
   "license": "MIT",
   "engines": {
     "node": ">=18"
