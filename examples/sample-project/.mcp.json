@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "."]
+    },
+    "broken-server": {
+      "command": "node",
+      "args": ["-e", "process.exit(1)"]
+    }
+  }
+}

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>mcpdoctor report</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 1.4rem; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 1.5rem; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.75rem; text-align: left; }
+  th { background: #f5f5f5; }
+  td.ok { color: #1a7f37; font-weight: 600; }
+  td.failed { color: #cf222e; font-weight: 600; }
+  ul { list-style: none; padding: 0; }
+  li { padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+  .badge { display: inline-block; min-width: 3.5rem; text-align: center; border-radius: 4px; padding: 0.1rem 0.4rem; margin-right: 0.5rem; font-size: 0.75rem; font-weight: 700; }
+  .sev-error .badge { background: #ffebe9; color: #cf222e; }
+  .sev-warn .badge { background: #fff8c5; color: #9a6700; }
+  .sev-info .badge { background: #eef2ff; color: #3538cd; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #0d1117; color: #e6edf3; }
+    th { background: #161b22; }
+    th, td { border-color: #30363d; }
+    li { border-color: #21262d; }
+  }
+</style>
+</head>
+<body>
+<h1>mcpdoctor report</h1>
+<table>
+  <thead><tr><th>Server</th><th>Status</th><th>Latency</th><th>Tools</th><th>Findings</th></tr></thead>
+  <tbody>
+<tr>
+        <td>filesystem</td>
+        <td class="ok">ok</td>
+        <td>2021ms</td>
+        <td>14</td>
+        <td>11</td>
+      </tr>
+<tr>
+        <td>broken-server</td>
+        <td class="failed">failed</td>
+        <td>51ms</td>
+        <td>0</td>
+        <td>1</td>
+      </tr>
+  </tbody>
+</table>
+<h2>Findings</h2><ul>
+<li class="sev-error">
+        <span class="badge">ERROR</span>
+        <strong>broken-server</strong> (startup): MCP error -32000: Connection closed
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'read_file' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'read_text_file' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'read_media_file' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'write_file' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'edit_file' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'create_directory' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'list_directory' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'list_directory_with_sizes' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'directory_tree' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'search_files' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+<li class="sev-info">
+        <span class="badge">INFO</span>
+        <strong>filesystem</strong> (permission-heuristic): Tool 'get_file_info' looks like it may allow broad shell/filesystem access (heuristic, not a security guarantee) — review its scope
+      </li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "needs-secret": {
+      "command": "node",
+      "args": ["server.js", "--token", "${SOME_UNDEFINED_TOKEN}"]
+    }
+  }
+}
