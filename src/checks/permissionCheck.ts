@@ -1,8 +1,10 @@
 import type { ConnectionResult } from "../connect/types.js";
 import type { Finding } from "./types.js";
 
-const RISKY_KEYWORDS = ["execute", "shell", "exec", "arbitrary", "any file"];
-const RISKY_PROPERTY_NAMES = ["command", "cmd", "shell", "path"];
+const RISKY_KEYWORDS = ["execute", "shell command", "arbitrary command", "run any"];
+// Deliberately excludes "path" — it's a normal parameter name on legitimate
+// file-reading tools and produced too many false positives (see CHANGELOG).
+const RISKY_PROPERTY_NAMES = ["command", "cmd", "shell"];
 
 function hasUnconstrainedRiskyProperty(schema: unknown): boolean {
   if (typeof schema !== "object" || schema === null) return false;
