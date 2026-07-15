@@ -1,5 +1,9 @@
 # mcpdoctor
 
+[![CI](https://github.com/JerenzeLevi/mcpdoctor/actions/workflows/ci.yml/badge.svg)](https://github.com/JerenzeLevi/mcpdoctor/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/mcpdoctor.svg)](https://www.npmjs.com/package/mcpdoctor)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+
 Diagnose your MCP (Model Context Protocol) server configs: discover, connect, and flag misconfigurations — before your AI assistant tells you something's silently broken.
 
 <!--
